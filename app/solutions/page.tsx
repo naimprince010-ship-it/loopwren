@@ -80,7 +80,7 @@ export default function SolutionsPage() {
           {solutions.map((solution, idx) => (
             <div 
               key={idx} 
-              className="group relative bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col h-full"
+              className="group relative bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col h-full overflow-hidden"
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
@@ -107,7 +107,7 @@ export default function SolutionsPage() {
                 </ul>
               </div>
               
-              <div className="flex flex-col sm:flex-row gap-3 mt-auto">
+              <div className="flex flex-col gap-3 mt-auto w-full">
                 <Link 
                   href="/contact" 
                   className={buttonVariants({ variant: "default", className: "w-full" })}
@@ -116,7 +116,7 @@ export default function SolutionsPage() {
                 </Link>
                 <Link 
                   href="/contact" 
-                  className={buttonVariants({ variant: "outline", className: "w-full sm:w-auto" })}
+                  className={buttonVariants({ variant: "outline", className: "w-full" })}
                 >
                   See demo
                 </Link>
