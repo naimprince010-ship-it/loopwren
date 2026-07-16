@@ -11,8 +11,8 @@ export function Header() {
           </span>
         </Link>
         <nav className="hidden md:flex items-center space-x-8 text-sm font-medium">
-          <Link href="/services" className="transition-colors hover:text-primary">
-            Services
+          <Link href="/solutions" className="transition-colors hover:text-primary">
+            Solutions
           </Link>
           <Link href="/work" className="transition-colors hover:text-primary">
             Work
