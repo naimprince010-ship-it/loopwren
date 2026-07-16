@@ -61,7 +61,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-heading font-semibold mb-6">Social</h2>
               <div className="flex gap-4">
                 <a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/profile.php?id=61591668553652" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-muted hover:bg-primary hover:text-primary-foreground rounded-full flex items-center justify-center transition-colors text-foreground"

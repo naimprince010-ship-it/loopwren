@@ -40,7 +40,7 @@ export function Footer() {
           <div>
             <h3 className="font-heading font-semibold mb-4 text-foreground">Social</h3>
             <div className="flex space-x-4 text-muted-foreground">
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+              <a href="https://www.facebook.com/profile.php?id=61591668553652" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
                 <span className="sr-only">Facebook</span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
