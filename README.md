@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Loopwren Studio
+
+Welcome to the **Loopwren** website repository. Loopwren is a small but precise software and app development studio specializing in robust engineering, beautiful UI design, and seamless user experiences.
+
+## Tech Stack
+
+This website is built with a modern, high-performance web stack:
+
+- **Framework**: [Next.js 14 (App Router)](https://nextjs.org/)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **UI Components**: [Shadcn UI](https://ui.shadcn.com/) / Base UI
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form + Zod validation
+- **Emails**: [Resend](https://resend.com) integration
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+npm install
+```
+
+Next, set up your local environment variables:
+
+1. Copy `.env.example` (or create a new `.env.local` file)
+2. Add your Resend API key: `RESEND_API_KEY=your_actual_key_here`
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `app/`: Next.js App Router pages and layouts (Home, About, Services, Work, Contact).
+- `components/`: Reusable React components (Header, Hero, Forms) and Shadcn UI primitives.
+- `public/`: Static assets like `logo.svg` and `og-image.png`.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The easiest way to deploy this Next.js app is to use the [Vercel Platform](https://vercel.com/new). Make sure to add your `RESEND_API_KEY` to the Environment Variables in your Vercel project settings before deploying.
