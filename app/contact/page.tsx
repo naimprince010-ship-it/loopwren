@@ -3,8 +3,14 @@ import { Mail, MapPin } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact | Loopwren",
+  title: "Contact Loopwren",
   description: "Get in touch with Loopwren for your software and app development needs.",
+  openGraph: {
+    title: "Contact Loopwren",
+    description: "Get in touch with Loopwren for your software and app development needs.",
+    url: "https://loopwren.com/contact",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  }
 };
 
 export default function ContactPage() {

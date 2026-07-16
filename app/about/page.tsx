@@ -1,8 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About | Loopwren",
+  title: "About Loopwren",
   description: "Learn more about the story and mission behind Loopwren.",
+  openGraph: {
+    title: "About Loopwren",
+    description: "Learn more about the story and mission behind Loopwren.",
+    url: "https://loopwren.com/about",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  }
 };
 
 export default function AboutPage() {

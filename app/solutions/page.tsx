@@ -14,49 +14,62 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-  title: "Solutions | Loopwren",
+  title: "Software Solutions — POS, Hospital, Pharmacy, Banking | Loopwren",
   description: "Ready-to-deploy software systems for your business.",
+  openGraph: {
+    title: "Software Solutions — POS, Hospital, Pharmacy, Banking | Loopwren",
+    description: "Ready-to-deploy software systems for your business.",
+    url: "https://loopwren.com/solutions",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  }
 };
 
 const solutions = [
   {
     title: "POS System",
+    slug: "pos-system",
     icon: Store,
     description: "Comprehensive point-of-sale management tailored for modern retail environments.",
     features: ["Real-time inventory tracking", "Barcode scanning & receipt printing", "Daily sales & profit reporting", "Multi-store management"],
   },
   {
     title: "Hospital Management System",
+    slug: "hospital-management",
     icon: Stethoscope,
     description: "A complete digital infrastructure for clinics, hospitals, and diagnostic centers.",
     features: ["Patient records & history (EHR)", "Doctor appointment scheduling", "Automated billing & invoicing", "Pharmacy & lab integration"],
   },
   {
     title: "Pharmacy POS",
+    slug: "pharmacy-pos",
     icon: Pill,
     description: "Specialized inventory and sales software designed specifically for pharmacies.",
     features: ["Medicine expiry date tracking", "Stock alert notifications", "Supplier & purchase management", "Fast checkout processing"],
   },
   {
     title: "E-commerce Platform",
+    slug: "ecommerce",
     icon: ShoppingCart,
     description: "Scalable online storefronts with integrated payment gateways and order tracking.",
     features: ["Custom-branded storefront", "Secure payment integrations", "Live order tracking", "Customer accounts & reviews"],
   },
   {
     title: "EdTech System",
+    slug: "edtech",
     icon: GraduationCap,
     description: "End-to-end management software for schools, colleges, and coaching centers.",
     features: ["Online class integration", "Automated results & grading", "Student fee & due management", "Attendance tracking"],
   },
   {
     title: "Somiti/Cooperative Management",
+    slug: "somiti-software",
     icon: Users,
     description: "Secure and transparent software for managing cooperatives, somitis, and micro-finance.",
     features: ["Member account management", "Savings & deposit tracking", "Loan installment calculations", "Automated penalty & interest"],
   },
   {
     title: "Banking Software",
+    slug: "banking-software",
     icon: Landmark,
     description: "Core banking solutions for financial institutions requiring enterprise-grade security.",
     features: ["Secure account ledgers", "Real-time transaction processing", "Loan & mortgage processing", "Audit trails & compliance"],
@@ -91,7 +104,9 @@ export default function SolutionsPage() {
                 </Badge>
               </div>
               
-              <h3 className="text-2xl font-heading font-semibold mb-3">{solution.title}</h3>
+              <Link href={`/solutions/${solution.slug}`} className="hover:text-primary transition-colors">
+                <h3 className="text-2xl font-heading font-semibold mb-3">{solution.title}</h3>
+              </Link>
               <p className="text-muted-foreground mb-8 min-h-[48px]">
                 {solution.description}
               </p>

@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,14 +19,14 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://loopwren.com"),
-  title: "Loopwren | Software & App Development Studio",
+  title: "Loopwren | Custom Software & Ready-Made Business Solutions",
   description: "Small but precise software and app development studio.",
   icons: {
     icon: "/logo.svg",
     apple: "/logo.svg",
   },
   openGraph: {
-    title: "Loopwren",
+    title: "Loopwren | Custom Software & Ready-Made Business Solutions",
     description: "Small but precise software and app development studio.",
     url: "https://loopwren.com",
     siteName: "Loopwren",
@@ -55,6 +56,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
