@@ -1,5 +1,6 @@
 export const solutionsData: Record<string, any> = {
   "pos-system": {
+    brandName: "Loopwren Vendo",
     title: "POS System",
     seoTitle: "POS System Software in Bangladesh | Loopwren",
     seoDescription: "Modern point-of-sale management tailored for retail environments in Bangladesh. Track inventory, sales, and profit in real-time.",
@@ -22,6 +23,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "hospital-management": {
+    brandName: "Loopwren Vitals",
     title: "Hospital Management System",
     seoTitle: "Hospital Management Software in Bangladesh | Loopwren",
     seoDescription: "A complete digital infrastructure for clinics, hospitals, and diagnostic centers in Bangladesh. Manage EHR, billing, and appointments.",
@@ -44,6 +46,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "pharmacy-pos": {
+    brandName: "Loopwren Rx",
     title: "Pharmacy POS",
     seoTitle: "Pharmacy POS Software in Bangladesh | Loopwren",
     seoDescription: "Specialized inventory and sales software designed specifically for pharmacies in Bangladesh. Track expiry dates and manage stock.",
@@ -66,6 +69,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "ecommerce": {
+    brandName: "Loopwren Bazaar",
     title: "E-commerce Platform",
     seoTitle: "E-commerce Platform Development in Bangladesh | Loopwren",
     seoDescription: "Scalable online storefronts with integrated payment gateways like bKash and SSLCommerz for the Bangladeshi market.",
@@ -88,6 +92,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "edtech": {
+    brandName: "Loopwren Learn",
     title: "EdTech System",
     seoTitle: "EdTech & School Management System in Bangladesh | Loopwren",
     seoDescription: "End-to-end management software for schools, colleges, and coaching centers in Bangladesh. Manage fees, results, and attendance.",
@@ -110,6 +115,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "somiti-software": {
+    brandName: "Loopwren Shonchoy",
     title: "Somiti & Cooperative Management Software",
     seoTitle: "Somiti & Cooperative Management Software in Bangladesh | Loopwren",
     seoDescription: "Secure and transparent software for managing cooperatives, somitis, and micro-finance organizations in Bangladesh.",
@@ -132,6 +138,7 @@ export const solutionsData: Record<string, any> = {
     `
   },
   "banking-software": {
+    brandName: "Loopwren Vault",
     title: "Banking Software",
     seoTitle: "Core Banking Software Solutions in Bangladesh | Loopwren",
     seoDescription: "Core banking solutions for financial institutions requiring enterprise-grade security and real-time transaction processing.",

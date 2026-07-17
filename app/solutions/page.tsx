@@ -26,6 +26,7 @@ export const metadata = {
 
 const solutions = [
   {
+    brandName: "Loopwren Vendo",
     title: "POS System",
     slug: "pos-system",
     icon: Store,
@@ -33,6 +34,7 @@ const solutions = [
     features: ["Real-time inventory tracking", "Barcode scanning & receipt printing", "Daily sales & profit reporting", "Multi-store management"],
   },
   {
+    brandName: "Loopwren Vitals",
     title: "Hospital Management System",
     slug: "hospital-management",
     icon: Stethoscope,
@@ -40,6 +42,7 @@ const solutions = [
     features: ["Patient records & history (EHR)", "Doctor appointment scheduling", "Automated billing & invoicing", "Pharmacy & lab integration"],
   },
   {
+    brandName: "Loopwren Rx",
     title: "Pharmacy POS",
     slug: "pharmacy-pos",
     icon: Pill,
@@ -47,6 +50,7 @@ const solutions = [
     features: ["Medicine expiry date tracking", "Stock alert notifications", "Supplier & purchase management", "Fast checkout processing"],
   },
   {
+    brandName: "Loopwren Bazaar",
     title: "E-commerce Platform",
     slug: "ecommerce",
     icon: ShoppingCart,
@@ -54,6 +58,7 @@ const solutions = [
     features: ["Custom-branded storefront", "Secure payment integrations", "Live order tracking", "Customer accounts & reviews"],
   },
   {
+    brandName: "Loopwren Learn",
     title: "EdTech System",
     slug: "edtech",
     icon: GraduationCap,
@@ -61,6 +66,7 @@ const solutions = [
     features: ["Online class integration", "Automated results & grading", "Student fee & due management", "Attendance tracking"],
   },
   {
+    brandName: "Loopwren Shonchoy",
     title: "Somiti/Cooperative Management",
     slug: "somiti-software",
     icon: Users,
@@ -68,6 +74,7 @@ const solutions = [
     features: ["Member account management", "Savings & deposit tracking", "Loan installment calculations", "Automated penalty & interest"],
   },
   {
+    brandName: "Loopwren Vault",
     title: "Banking Software",
     slug: "banking-software",
     icon: Landmark,
@@ -104,8 +111,9 @@ export default function SolutionsPage() {
                 </Badge>
               </div>
               
-              <Link href={`/solutions/${solution.slug}`} className="hover:text-primary transition-colors">
-                <h3 className="text-2xl font-heading font-semibold mb-3">{solution.title}</h3>
+              <Link href={`/solutions/${solution.slug}`} className="hover:text-primary transition-colors block">
+                <h3 className="text-2xl font-heading font-bold mb-1">{solution.brandName}</h3>
+                <span className="text-sm font-medium text-muted-foreground mb-3 block">— {solution.title}</span>
               </Link>
               <p className="text-muted-foreground mb-8 min-h-[48px]">
                 {solution.description}

@@ -38,7 +38,8 @@ export default function WorkPage() {
                       {project.tag}
                     </span>
                   </div>
-                  <CardTitle className="font-heading text-xl">{project.name}</CardTitle>
+                  <CardTitle className="font-heading text-xl">{project.brandName}</CardTitle>
+                  <span className="text-sm font-medium text-muted-foreground block mt-1">— {project.name}</span>
                   <CardDescription className="text-base text-primary font-medium mt-2">
                     {project.result}
                   </CardDescription>

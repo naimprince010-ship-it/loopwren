@@ -3,6 +3,7 @@ import { PosMockup, HospitalMockup, PharmacyMockup, EcommerceMockup, EdtechMocku
 export const projects = [
   {
     id: "pos-system",
+    brandName: "Loopwren Vendo",
     name: "POS System",
     tag: "Retail System",
     result: "Built for fast, reliable retail checkout",
@@ -13,6 +14,7 @@ export const projects = [
   },
   {
     id: "hospital-management",
+    brandName: "Loopwren Vitals",
     name: "Hospital Management",
     tag: "Healthcare",
     result: "Designed to simplify patient record keeping",
@@ -23,6 +25,7 @@ export const projects = [
   },
   {
     id: "pharmacy-pos",
+    brandName: "Loopwren Rx",
     name: "Pharmacy POS",
     tag: "Medical Retail",
     result: "Built to reduce stock and expiry tracking errors",
@@ -33,6 +36,7 @@ export const projects = [
   },
   {
     id: "ecommerce",
+    brandName: "Loopwren Bazaar",
     name: "E-commerce Platform",
     tag: "Online Retail",
     result: "Increased online sales by 150%",
@@ -43,6 +47,7 @@ export const projects = [
   },
   {
     id: "edtech",
+    brandName: "Loopwren Learn",
     name: "EdTech System",
     tag: "Education",
     result: "Streamlined grading for 5,000+ students",
@@ -53,6 +58,7 @@ export const projects = [
   },
   {
     id: "somiti-software",
+    brandName: "Loopwren Shonchoy",
     name: "Somiti Management",
     tag: "Micro-finance",
     result: "100% accurate loan tracking",
@@ -63,6 +69,7 @@ export const projects = [
   },
   {
     id: "banking-software",
+    brandName: "Loopwren Vault",
     name: "Banking Software",
     tag: "Finance",
     result: "Enterprise-grade core banking",

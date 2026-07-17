@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!project) return { title: "Work Not Found" };
   
   return {
-    title: `${project.name} Case Study | Loopwren`,
+    title: `${project.brandName} — ${project.name} Case Study | Loopwren`,
     description: project.result,
   };
 }
@@ -42,7 +42,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
           <span className="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
             {project.tag}
           </span>
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">{project.name}</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2">{project.brandName}</h1>
+          <p className="text-2xl font-heading font-medium text-muted-foreground mb-4">— {project.name}</p>
           <p className="text-xl text-secondary font-medium">{project.result}</p>
         </div>
 

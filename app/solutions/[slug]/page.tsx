@@ -33,7 +33,7 @@ export function generateMetadata({ params }: Props): Metadata {
     return { title: "Solution Not Found" };
   }
   return {
-    title: data.seoTitle,
+    title: `${data.brandName} — ${data.seoTitle}`,
     description: data.seoDescription,
     openGraph: {
       title: data.seoTitle,
@@ -58,7 +58,8 @@ export default function SolutionDetail({ params }: Props) {
         </Link>
         
         <header className="mb-12">
-          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">{data.title}</h1>
+          <h1 className="text-4xl md:text-5xl font-heading font-bold mb-2 text-foreground">{data.brandName}</h1>
+          <p className="text-2xl font-heading font-medium text-muted-foreground mb-6">— {data.title}</p>
           <p className="text-xl text-muted-foreground max-w-2xl">{data.seoDescription}</p>
         </header>
 
