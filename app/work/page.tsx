@@ -12,7 +12,7 @@ const projects = [
     id: "pos-system",
     name: "POS System",
     tag: "Retail System",
-    result: "Reduced checkout time by 60%",
+    result: "Built for fast, reliable retail checkout",
     problem: "A major retail chain was facing issues with slow checkout times and inaccurate inventory tracking across multiple branches.",
     solution: "We deployed our unified Point-of-Sale (POS) system, integrating barcode scanning and centralized real-time inventory management.",
     outcome: "Checkout speeds improved by 60%, and inventory discrepancies were reduced to zero across all 15 branch locations.",
@@ -22,7 +22,7 @@ const projects = [
     id: "hospital-management",
     name: "Hospital Management",
     tag: "Healthcare",
-    result: "Automated 100% of patient records",
+    result: "Designed to simplify patient record keeping",
     problem: "A busy urban hospital relied heavily on paper-based patient files, causing delays in treatment and billing errors.",
     solution: "We implemented our comprehensive Hospital Management System (EHR), fully digitizing patient histories, doctor scheduling, and pharmacy billing.",
     outcome: "Patient wait times decreased by 40% and billing accuracy improved significantly through automated invoicing.",
@@ -32,7 +32,7 @@ const projects = [
     id: "pharmacy-pos",
     name: "Pharmacy POS",
     tag: "Medical Retail",
-    result: "Zero expired stock waste",
+    result: "Built to reduce stock and expiry tracking errors",
     problem: "A large pharmacy struggled with managing expiry dates manually, leading to financial losses from expired medications.",
     solution: "We rolled out our specialized Pharmacy POS, featuring automated expiry tracking, minimum stock alerts, and supplier management.",
     outcome: "The pharmacy eliminated expired stock waste completely and reduced inventory counting time by over 15 hours per week.",
@@ -145,8 +145,10 @@ export default function WorkPage() {
               className="cursor-pointer group hover:border-primary transition-colors flex flex-col overflow-hidden"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="h-56 bg-muted relative border-b">
-                <project.Mockup />
+              <div className="h-56 bg-muted relative border-b overflow-hidden">
+                <div className="w-[150%] h-[150%] transform scale-[0.666] origin-top-left">
+                  <project.Mockup />
+                </div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-background/80 transition-opacity backdrop-blur-sm z-10">
                   <span className="font-semibold text-primary">View Case Study</span>
                 </div>
