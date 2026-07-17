@@ -16,6 +16,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/solutions/edtech',
     '/solutions/somiti-software',
     '/solutions/banking-software',
+    '/work/pos-system',
+    '/work/hospital-management',
+    '/work/pharmacy-pos',
+    '/work/ecommerce',
+    '/work/edtech',
+    '/work/somiti-software',
+    '/work/banking-software',
   ]
 
   return routes.map((route) => ({
