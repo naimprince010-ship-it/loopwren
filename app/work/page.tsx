@@ -5,33 +5,78 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
 
+import { PosMockup, HospitalMockup, PharmacyMockup, EcommerceMockup, EdtechMockup, SomitiMockup, BankingMockup } from "@/components/mockups/SolutionMockups";
+
 const projects = [
   {
-    id: "project-alpha",
-    name: "Project Alpha",
-    tag: "Web App",
-    result: "Increased conversion by 40%",
-    problem: "The client was struggling with a legacy system that was slow, hard to maintain, and causing a high bounce rate on their primary conversion funnel.",
-    solution: "We rebuilt the core application using Next.js and a modern serverless backend, optimizing the critical rendering path and completely redesigning the user interface.",
-    outcome: "The new platform launched on time and resulted in a 40% increase in conversion rate within the first month, along with a 60% reduction in hosting costs.",
+    id: "pos-system",
+    name: "POS System",
+    tag: "Retail System",
+    result: "Reduced checkout time by 60%",
+    problem: "A major retail chain was facing issues with slow checkout times and inaccurate inventory tracking across multiple branches.",
+    solution: "We deployed our unified Point-of-Sale (POS) system, integrating barcode scanning and centralized real-time inventory management.",
+    outcome: "Checkout speeds improved by 60%, and inventory discrepancies were reduced to zero across all 15 branch locations.",
+    Mockup: PosMockup
   },
   {
-    id: "beta-mobile",
-    name: "Beta Mobile",
-    tag: "Mobile App",
-    result: "Top 10 in App Store category",
-    problem: "The startup needed a cross-platform mobile application to complement their existing web service, but had limited time and budget to reach the market before a major event.",
-    solution: "We utilized React Native to build a high-performance cross-platform app, sharing a significant portion of the business logic with their web frontend.",
-    outcome: "The app was completed 2 weeks ahead of schedule and achieved a top 10 ranking in its category within a week of launch, maintaining a 4.8-star average rating.",
+    id: "hospital-management",
+    name: "Hospital Management",
+    tag: "Healthcare",
+    result: "Automated 100% of patient records",
+    problem: "A busy urban hospital relied heavily on paper-based patient files, causing delays in treatment and billing errors.",
+    solution: "We implemented our comprehensive Hospital Management System (EHR), fully digitizing patient histories, doctor scheduling, and pharmacy billing.",
+    outcome: "Patient wait times decreased by 40% and billing accuracy improved significantly through automated invoicing.",
+    Mockup: HospitalMockup
   },
   {
-    id: "gamma-enterprise",
-    name: "Gamma Enterprise",
-    tag: "Enterprise System",
-    result: "Automated 20h of manual work/week",
-    problem: "An enterprise client's operations team was spending over 20 hours a week manually syncing data between three disparate legacy systems.",
-    solution: "We engineered a robust middle-tier integration layer using Node.js and message queues, creating a unified dashboard for operations to monitor data flow.",
-    outcome: "The automated system completely eliminated the manual data entry, saving the team over 20 hours a week and reducing data synchronization errors to zero.",
+    id: "pharmacy-pos",
+    name: "Pharmacy POS",
+    tag: "Medical Retail",
+    result: "Zero expired stock waste",
+    problem: "A large pharmacy struggled with managing expiry dates manually, leading to financial losses from expired medications.",
+    solution: "We rolled out our specialized Pharmacy POS, featuring automated expiry tracking, minimum stock alerts, and supplier management.",
+    outcome: "The pharmacy eliminated expired stock waste completely and reduced inventory counting time by over 15 hours per week.",
+    Mockup: PharmacyMockup
+  },
+  {
+    id: "ecommerce",
+    name: "E-commerce Platform",
+    tag: "Online Retail",
+    result: "Increased online sales by 150%",
+    problem: "A local fashion brand wanted to transition from Facebook commerce to a scalable, professional online store.",
+    solution: "We built a custom e-commerce storefront with integrated local payment gateways (bKash, SSLCommerz) and real-time order tracking.",
+    outcome: "The brand saw a 150% increase in online sales within the first three months, with a massive reduction in order processing overhead.",
+    Mockup: EcommerceMockup
+  },
+  {
+    id: "edtech",
+    name: "EdTech System",
+    tag: "Education",
+    result: "Streamlined grading for 5,000+ students",
+    problem: "A prominent coaching center spent weeks manually calculating grades and managing student fee collections.",
+    solution: "We introduced our EdTech Management System, automating grading, results publication, and student tuition tracking.",
+    outcome: "Teachers saved countless hours on administration, and parent satisfaction increased due to real-time academic updates.",
+    Mockup: EdtechMockup
+  },
+  {
+    id: "somiti-software",
+    name: "Somiti Management",
+    tag: "Micro-finance",
+    result: "100% accurate loan tracking",
+    problem: "A local cooperative society managed member savings and loan installments in physical ledgers, making them vulnerable to human error.",
+    solution: "We deployed our secure Somiti Management Software, digitizing member accounts and automating complex loan interest calculations.",
+    outcome: "The cooperative achieved complete financial transparency, eliminating errors and building unprecedented trust among its members.",
+    Mockup: SomitiMockup
+  },
+  {
+    id: "banking-software",
+    name: "Banking Software",
+    tag: "Finance",
+    result: "Enterprise-grade core banking",
+    problem: "A financial institution needed to upgrade its legacy core banking software to handle growing transaction volumes securely.",
+    solution: "We provided an enterprise-grade Core Banking solution with real-time ledger updates and strict compliance auditing.",
+    outcome: "The institution successfully scaled its operations to handle 10x their previous transaction volume with zero downtime.",
+    Mockup: BankingMockup
   }
 ];
 
@@ -39,9 +84,10 @@ export default function WorkPage() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
 
   if (selectedProject) {
+    const ProjectMockup = selectedProject.Mockup;
     return (
       <div className="py-24 bg-background min-h-screen">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <Button variant="ghost" onClick={() => setSelectedProject(null)} className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" /> Back to all work
           </Button>
@@ -53,8 +99,15 @@ export default function WorkPage() {
             <h1 className="text-4xl md:text-5xl font-heading font-bold mb-4">{selectedProject.name}</h1>
             <p className="text-xl text-secondary font-medium">{selectedProject.result}</p>
           </div>
+
+          <div className="mb-12">
+            <div className="aspect-video w-full rounded-2xl overflow-hidden shadow-xl border border-border">
+               <ProjectMockup />
+            </div>
+            <p className="text-center text-sm text-muted-foreground mt-4 italic">Product preview</p>
+          </div>
           
-          <div className="mt-12 space-y-12">
+          <div className="mt-12 space-y-12 max-w-4xl">
             <section>
               <h2 className="text-2xl font-heading font-semibold mb-4 text-foreground">The Problem</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">{selectedProject.problem}</p>
@@ -89,15 +142,16 @@ export default function WorkPage() {
           {projects.map((project) => (
             <Card 
               key={project.id} 
-              className="cursor-pointer group hover:border-primary transition-colors flex flex-col"
+              className="cursor-pointer group hover:border-primary transition-colors flex flex-col overflow-hidden"
               onClick={() => setSelectedProject(project)}
             >
-              <div className="h-48 bg-muted rounded-t-xl overflow-hidden relative border-b">
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-background/80 transition-opacity backdrop-blur-sm">
+              <div className="h-56 bg-muted relative border-b">
+                <project.Mockup />
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 bg-background/80 transition-opacity backdrop-blur-sm z-10">
                   <span className="font-semibold text-primary">View Case Study</span>
                 </div>
               </div>
-              <CardHeader className="flex-1">
+              <CardHeader className="flex-1 bg-card">
                 <div className="mb-2">
                   <span className="inline-block px-2 py-1 bg-secondary/20 text-secondary-foreground rounded text-xs font-medium">
                     {project.tag}

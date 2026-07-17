@@ -5,8 +5,20 @@ import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 
+import { PosMockup, HospitalMockup, PharmacyMockup, EcommerceMockup, EdtechMockup, SomitiMockup, BankingMockup } from "@/components/mockups/SolutionMockups";
+
 type Props = {
   params: { slug: string };
+};
+
+const MockupMap: Record<string, React.ReactNode> = {
+  "pos-system": <PosMockup />,
+  "hospital-management": <HospitalMockup />,
+  "pharmacy-pos": <PharmacyMockup />,
+  "ecommerce": <EcommerceMockup />,
+  "edtech": <EdtechMockup />,
+  "somiti-software": <SomitiMockup />,
+  "banking-software": <BankingMockup />
 };
 
 export function generateStaticParams() {
@@ -40,7 +52,7 @@ export default function SolutionDetail({ params }: Props) {
 
   return (
     <div className="py-24 bg-background min-h-screen">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <Link href="/solutions" className="inline-flex items-center text-muted-foreground hover:text-primary transition-colors mb-8">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to all solutions
         </Link>
@@ -49,6 +61,13 @@ export default function SolutionDetail({ params }: Props) {
           <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-foreground">{data.title}</h1>
           <p className="text-xl text-muted-foreground max-w-2xl">{data.seoDescription}</p>
         </header>
+
+        <div className="mb-16">
+          <div className="aspect-video w-full">
+            {MockupMap[params.slug]}
+          </div>
+          <p className="text-center text-sm text-muted-foreground mt-4 italic">Interface preview</p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           {/* Main Content */}
