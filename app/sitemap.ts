@@ -9,6 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/work',
     '/contact',
     '/solutions',
+    '/services',
     '/solutions/pos-system',
     '/solutions/hospital-management',
     '/solutions/pharmacy-pos',
