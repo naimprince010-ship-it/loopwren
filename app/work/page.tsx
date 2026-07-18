@@ -1,3 +1,4 @@
+import { FadeUpDiv } from "@/components/FadeUpDiv";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import { projects } from "@/data/workData";
@@ -19,11 +20,12 @@ export default function WorkPage() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
-            <Link key={project.id} href={`/work/${project.id}`} className="block h-full">
-              <Card 
-                className="cursor-pointer group hover:border-primary transition-colors flex flex-col h-full overflow-hidden"
-              >
+          {projects.map((project, index) => (
+            <FadeUpDiv key={project.id} delay={index * 0.08} className="h-full">
+              <Link href={`/work/${project.id}`} className="block h-full">
+                <Card 
+                  className="cursor-pointer group hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 flex flex-col h-full overflow-hidden"
+                >
                 <div className="h-56 bg-muted relative border-b overflow-hidden">
                   <div className="w-[150%] h-[150%] transform scale-[0.666] origin-top-left">
                     <project.Mockup />
@@ -44,8 +46,9 @@ export default function WorkPage() {
                     {project.result}
                   </CardDescription>
                 </CardHeader>
-              </Card>
-            </Link>
+                </Card>
+              </Link>
+            </FadeUpDiv>
           ))}
         </div>
       </div>

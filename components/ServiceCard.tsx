@@ -9,7 +9,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({ title, description, Icon }: ServiceCardProps) {
   return (
-    <Card className="group hover:border-primary transition-colors duration-300">
+    <Card className="group hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
       <CardHeader>
         <div className="w-12 h-12 bg-muted rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
           <Icon className="w-6 h-6 text-primary" />

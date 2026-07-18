@@ -1,3 +1,4 @@
+import { FadeUpDiv } from "@/components/FadeUpDiv";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -98,10 +99,10 @@ export default function SolutionsPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
           {solutions.map((solution, idx) => (
-            <div 
-              key={idx} 
-              className="group relative bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:border-primary/50 transition-all duration-300 flex flex-col h-full overflow-hidden"
-            >
+            <FadeUpDiv key={idx} delay={idx * 0.08} className="h-full">
+              <div 
+                className="group relative bg-card rounded-2xl border border-border p-8 hover:shadow-xl hover:-translate-y-1 hover:border-primary/50 transition-all duration-300 flex flex-col h-full overflow-hidden"
+              >
               <div className="flex justify-between items-start mb-6">
                 <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-300">
                   <solution.icon className="w-7 h-7" />
@@ -145,7 +146,8 @@ export default function SolutionsPage() {
                 </Link>
               </div>
             </div>
-          ))}
+          </FadeUpDiv>
+        ))}
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
+import { FadeUpDiv } from "@/components/FadeUpDiv";
 import { 
   Smartphone, 
   Monitor, 
@@ -79,10 +80,10 @@ export default function ServicesPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
           {services.map((service, idx) => (
-            <div 
-              key={idx}
-              className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col hover:border-primary transition-colors group"
-            >
+            <FadeUpDiv key={idx} delay={idx * 0.08} className="h-full">
+              <div 
+                className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
+              >
               <div className="mb-6 bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 {service.icon}
               </div>
@@ -106,7 +107,8 @@ export default function ServicesPage() {
                 </Link>
               </div>
             </div>
-          ))}
+          </FadeUpDiv>
+        ))}
         </div>
       </div>
     </div>
