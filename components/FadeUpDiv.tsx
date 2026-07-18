@@ -16,7 +16,7 @@ export function FadeUpDiv({ children, delay = 0, className = "" }: FadeUpDivProp
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay }}
-      className={className}
+      className={`w-full ${className}`}
     >
       {children}
     </motion.div>

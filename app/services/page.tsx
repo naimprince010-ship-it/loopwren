@@ -97,7 +97,7 @@ export default function ServicesPage() {
           {services.map((service, idx) => (
             <FadeUpDiv key={idx} delay={idx * 0.08} className="h-full">
               <div 
-                className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group"
+                className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group overflow-hidden"
               >
               <div className="mb-6 bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                 {service.icon}
@@ -137,7 +137,7 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {technologies.map((tech, idx) => (
               <FadeUpDiv key={idx} delay={idx * 0.08} className="h-full">
-                <div className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                <div className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group overflow-hidden">
                   <div className="mb-6 bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
                     {tech.icon}
                   </div>
