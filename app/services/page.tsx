@@ -9,7 +9,9 @@ import {
   Globe, 
   Cloud, 
   TrendingUp, 
-  Users 
+  Users,
+  Code2,
+  Server
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -67,6 +69,19 @@ const services = [
   }
 ];
 
+const technologies = [
+  {
+    category: "Languages",
+    icon: <Code2 className="w-8 h-8 text-primary" />,
+    items: ["JavaScript/TypeScript", "PHP", "Python", "Java", ".Net", "HTML5"]
+  },
+  {
+    category: "Platforms",
+    icon: <Server className="w-8 h-8 text-primary" />,
+    items: ["AWS", "Google Cloud", "Azure", "Oracle", "SAP"]
+  }
+];
+
 export default function ServicesPage() {
   return (
     <div className="py-24 bg-background min-h-screen">
@@ -110,6 +125,37 @@ export default function ServicesPage() {
           </FadeUpDiv>
         ))}
         </div>
+
+        {/* Technologies Section */}
+        <div className="mt-32">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-foreground">Technologies We Use</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              We leverage modern languages and reliable platforms to build scalable, high-performance applications.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {technologies.map((tech, idx) => (
+              <FadeUpDiv key={idx} delay={idx * 0.08} className="h-full">
+                <div className="bg-card rounded-2xl p-8 border border-border shadow-sm flex flex-col h-full hover:border-primary hover:-translate-y-1 hover:shadow-lg transition-all duration-300 group">
+                  <div className="mb-6 bg-primary/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                    {tech.icon}
+                  </div>
+                  <h3 className="text-2xl font-heading font-semibold mb-6">{tech.category}</h3>
+                  <ul className="space-y-3">
+                    {tech.items.map((item, iIdx) => (
+                      <li key={iIdx} className="text-base font-medium text-foreground/80 flex items-center">
+                        <span className="w-2 h-2 rounded-full bg-secondary mr-3" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </FadeUpDiv>
+            ))}
+          </div>
+        </div>
+
       </div>
     </div>
   );
