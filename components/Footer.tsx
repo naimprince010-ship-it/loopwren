@@ -61,7 +61,24 @@ export function Footer() {
           </div>
         </div>
         
-        <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
+        <div className="border-t mt-12 pt-8 pb-4 text-sm text-muted-foreground">
+          <h4 className="font-heading font-semibold mb-3 text-foreground">Top Areas We Serve in Bangladesh</h4>
+          <div className="flex flex-wrap gap-x-4 gap-y-2">
+            <Link href="/it-company-in/dhaka" className="hover:text-primary transition-colors">Dhaka</Link>
+            <Link href="/it-company-in/chattogram" className="hover:text-primary transition-colors">Chattogram</Link>
+            <Link href="/it-company-in/sylhet" className="hover:text-primary transition-colors">Sylhet</Link>
+            <Link href="/it-company-in/rajshahi" className="hover:text-primary transition-colors">Rajshahi</Link>
+            <Link href="/it-company-in/khulna" className="hover:text-primary transition-colors">Khulna</Link>
+            <Link href="/it-company-in/barishal" className="hover:text-primary transition-colors">Barishal</Link>
+            <Link href="/it-company-in/rangpur" className="hover:text-primary transition-colors">Rangpur</Link>
+            <Link href="/it-company-in/mymensingh" className="hover:text-primary transition-colors">Mymensingh</Link>
+            <Link href="/it-company-in/comilla" className="hover:text-primary transition-colors">Comilla</Link>
+            <Link href="/it-company-in/coxs-bazar" className="hover:text-primary transition-colors">Cox's Bazar</Link>
+            <span className="text-muted-foreground/70">and all other 64 districts</span>
+          </div>
+        </div>
+        
+        <div className="border-t mt-4 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Loopwren. All rights reserved.</p>
         </div>
       </div>

@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next'
+import { districts } from '@/data/districts'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.loopwren.com'
   
-  const routes = [
+  const staticRoutes = [
     '',
     '/about',
     '/work',
@@ -26,10 +27,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/work/banking-software',
   ]
 
-  return routes.map((route) => ({
+  const districtRoutes = districts.map(d => `/it-company-in/${d.slug}`)
+  
+  const allRoutes = [...staticRoutes, ...districtRoutes]
+
+  return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: route === '' ? 1 : 0.8,
+    priority: route === '' ? 1 : (route.startsWith('/it-company-in/') ? 0.6 : 0.8),
   }))
 }
