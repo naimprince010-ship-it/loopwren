@@ -13,8 +13,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { district: string } }): Metadata {
-  const district = districts.find(d => d.slug === params.district);
+export async function generateMetadata({ params }: { params: Promise<{ district: string }> }): Promise<Metadata> {
+  const { district: districtSlug } = await params;
+  const district = districts.find(d => d.slug === districtSlug);
   
   if (!district) {
     return { title: "Not Found" };
@@ -30,8 +31,9 @@ export function generateMetadata({ params }: { params: { district: string } }): 
   };
 }
 
-export default function DistrictLocationPage({ params }: { params: { district: string } }) {
-  const district = districts.find(d => d.slug === params.district);
+export default async function DistrictLocationPage({ params }: { params: Promise<{ district: string }> }) {
+  const { district: districtSlug } = await params;
+  const district = districts.find(d => d.slug === districtSlug);
 
   if (!district) {
     notFound();
