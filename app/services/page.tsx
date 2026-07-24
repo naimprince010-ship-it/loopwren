@@ -11,7 +11,10 @@ import {
   TrendingUp, 
   Users,
   Code2,
-  Server
+  Server,
+  ShoppingCart,
+  Palette,
+  Layers
 } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -24,50 +27,23 @@ export const metadata: Metadata = {
   },
 };
 
-const services = [
-  {
-    icon: <Smartphone className="w-8 h-8 text-primary" />,
-    name: "Mobile App Development",
-    description: "Build robust, scalable iOS, Android, and cross-platform applications.",
-    features: ["iOS & Android", "React Native", "High Performance"]
-  },
-  {
-    icon: <Monitor className="w-8 h-8 text-primary" />,
-    name: "Custom Software Development",
-    description: "Tailor-made software solutions like ERP, CRM, and CMS for your business.",
-    features: ["Enterprise ERP", "Custom CRM", "Scalable CMS"]
-  },
-  {
-    icon: <Brain className="w-8 h-8 text-primary" />,
-    name: "AI Development",
-    description: "Integrate Generative AI, NLP, and AI agents into your workflows.",
-    features: ["Generative AI", "NLP", "AI Agent Integration"]
-  },
-  {
-    icon: <Globe className="w-8 h-8 text-primary" />,
-    name: "Web Development",
-    description: "Professional websites, e-commerce platforms, and web portals.",
-    features: ["E-commerce", "Web Portals", "Responsive Sites"]
-  },
-  {
-    icon: <Cloud className="w-8 h-8 text-primary" />,
-    name: "Cloud Services",
-    description: "Seamless cloud migration, reliable hosting, and infrastructure maintenance.",
-    features: ["Migration", "Hosting", "Maintenance"]
-  },
-  {
-    icon: <TrendingUp className="w-8 h-8 text-primary" />,
-    name: "Digital Marketing",
-    description: "Data-driven SEO, SEM, and social media marketing to boost your presence.",
-    features: ["SEO", "SEM", "Social Media"]
-  },
-  {
-    icon: <Users className="w-8 h-8 text-primary" />,
-    name: "IT Staff Augmentation",
-    description: "Extend your team with our dedicated, skilled software developers.",
-    features: ["Dedicated Devs", "Flexible Scaling", "Top Talent"]
-  }
-];
+import { servicesData } from "@/data/servicesData";
+
+const iconComponents: Record<string, React.ReactNode> = {
+  Smartphone: <Smartphone className="w-8 h-8 text-primary" />,
+  Code: <Code2 className="w-8 h-8 text-primary" />,
+  ShoppingCart: <ShoppingCart className="w-8 h-8 text-primary" />,
+  Palette: <Palette className="w-8 h-8 text-primary" />,
+  Layers: <Layers className="w-8 h-8 text-primary" />
+};
+
+const services = Object.entries(servicesData).map(([slug, data]) => ({
+  icon: iconComponents[data.iconName] || <Server className="w-8 h-8 text-primary" />,
+  name: data.title,
+  description: data.shortDescription,
+  features: data.features.slice(0, 3), // Show first 3 features
+  slug: slug
+}));
 
 const technologies = [
   {
@@ -117,8 +93,8 @@ export default function ServicesPage() {
               </ul>
               
               <div className="mt-auto pt-4 border-t border-border">
-                <Link href="/contact" className={buttonVariants({ variant: "default", className: "w-full" })}>
-                  Get a quote
+                <Link href={`/services/${service.slug}`} className={buttonVariants({ variant: "default", className: "w-full" })}>
+                  Learn more
                 </Link>
               </div>
             </div>

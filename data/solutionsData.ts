@@ -2,8 +2,8 @@ export const solutionsData: Record<string, any> = {
   "pos-system": {
     brandName: "Loopwren Vendo",
     title: "POS System",
-    seoTitle: "POS System Software in Bangladesh | Loopwren",
-    seoDescription: "Modern point-of-sale management tailored for retail environments in Bangladesh. Track inventory, sales, and profit in real-time.",
+    seoTitle: "Best POS software in Bangladesh | Inventory Management",
+    seoDescription: "The best POS software in Bangladesh. Modern point-of-sale system tailored for retail environments. Track inventory, sales, and profit in real-time.",
     features: ["Real-time inventory tracking", "Barcode scanning & receipt printing", "Daily sales & profit reporting", "Multi-store management"],
     content: `
       <h2>The Best POS System for Retail in Bangladesh</h2>
@@ -25,8 +25,8 @@ export const solutionsData: Record<string, any> = {
   "hospital-management": {
     brandName: "Loopwren Vitals",
     title: "Hospital Management System",
-    seoTitle: "Hospital Management Software in Bangladesh | Loopwren",
-    seoDescription: "A complete digital infrastructure for clinics, hospitals, and diagnostic centers in Bangladesh. Manage EHR, billing, and appointments.",
+    seoTitle: "Hospital Management Software in Bangladesh | Best HMS",
+    seoDescription: "Best hospital management software in Bangladesh. A complete digital infrastructure for clinics, hospitals, and diagnostic centers.",
     features: ["Patient records & history (EHR)", "Doctor appointment scheduling", "Automated billing & invoicing", "Pharmacy & lab integration"],
     content: `
       <h2>Comprehensive Hospital Management System in Bangladesh</h2>
@@ -48,8 +48,8 @@ export const solutionsData: Record<string, any> = {
   "pharmacy-pos": {
     brandName: "Loopwren Rx",
     title: "Pharmacy POS",
-    seoTitle: "Pharmacy POS Software in Bangladesh | Loopwren",
-    seoDescription: "Specialized inventory and sales software designed specifically for pharmacies in Bangladesh. Track expiry dates and manage stock.",
+    seoTitle: "Pharmacy Management System Software BD | Best Pharmacy POS",
+    seoDescription: "Specialized pharmacy management system software in BD. Track expiry dates, manage stock, and streamline sales effortlessly.",
     features: ["Medicine expiry date tracking", "Stock alert notifications", "Supplier & purchase management", "Fast checkout processing"],
     content: `
       <h2>Specialized Pharmacy POS Software in Bangladesh</h2>
@@ -71,8 +71,8 @@ export const solutionsData: Record<string, any> = {
   "ecommerce": {
     brandName: "Loopwren Bazaar",
     title: "E-commerce Platform",
-    seoTitle: "E-commerce Platform Development in Bangladesh | Loopwren",
-    seoDescription: "Scalable online storefronts with integrated payment gateways like bKash and SSLCommerz for the Bangladeshi market.",
+    seoTitle: "E-commerce Website Developer in Bangladesh | Custom Platform",
+    seoDescription: "Hire the best e-commerce website developer in Bangladesh. Build scalable online storefronts with integrated payment gateways like bKash.",
     features: ["Custom-branded storefront", "Secure payment integrations", "Live order tracking", "Customer accounts & reviews"],
     content: `
       <h2>Scalable E-commerce Platform for Bangladesh</h2>
@@ -94,8 +94,8 @@ export const solutionsData: Record<string, any> = {
   "edtech": {
     brandName: "Loopwren Learn",
     title: "EdTech System",
-    seoTitle: "EdTech & School Management System in Bangladesh | Loopwren",
-    seoDescription: "End-to-end management software for schools, colleges, and coaching centers in Bangladesh. Manage fees, results, and attendance.",
+    seoTitle: "School Management Software in Bangladesh | Best EdTech System",
+    seoDescription: "The best school management software in Bangladesh. End-to-end management for schools, colleges, and coaching centers.",
     features: ["Online class integration", "Automated results & grading", "Student fee & due management", "Attendance tracking"],
     content: `
       <h2>Comprehensive EdTech & School Management System</h2>

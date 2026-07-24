@@ -19,15 +19,15 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://loopwren.com"),
-  title: "Loopwren | Custom Software & Ready-Made Business Solutions",
-  description: "Small but precise software and app development studio.",
+  title: "Best IT Company in Bangladesh | Top Software Development Agency - Loopwren",
+  description: "Loopwren is a top software development company in Bangladesh. We build custom software, POS, hospital management, and mobile apps.",
   icons: {
     icon: "/logo.svg",
     apple: "/logo.svg",
   },
   openGraph: {
-    title: "Loopwren | Custom Software & Ready-Made Business Solutions",
-    description: "Small but precise software and app development studio.",
+    title: "Best IT Company in Bangladesh | Top Software Development Agency",
+    description: "Loopwren is a top software development company in Bangladesh. We build custom software, POS, hospital management, and mobile apps.",
     url: "https://loopwren.com",
     siteName: "Loopwren",
     images: [

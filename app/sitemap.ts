@@ -1,5 +1,6 @@
 import { MetadataRoute } from 'next'
 import { districts } from '@/data/districts'
+import { servicesData } from '@/data/servicesData'
  
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://www.loopwren.com'
@@ -28,8 +29,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   const districtRoutes = districts.map(d => `/it-company-in/${d.slug}`)
+  const serviceRoutes = Object.keys(servicesData).map(slug => `/services/${slug}`)
   
-  const allRoutes = [...staticRoutes, ...districtRoutes]
+  const allRoutes = [...staticRoutes, ...districtRoutes, ...serviceRoutes]
 
   return allRoutes.map((route) => ({
     url: `${baseUrl}${route}`,

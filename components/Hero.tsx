@@ -33,7 +33,7 @@ export function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-lg sm:text-xl text-[#8FD9CB] mb-10 max-w-2xl"
           >
-            A small but precise software and app development studio. We build custom software, web applications, and product architecture tailored for your unique needs.
+            We are a top software development company in Bangladesh. A small but precise studio building custom software, POS, and mobile applications tailored for your unique business needs.
           </motion.p>
           
           <motion.div
